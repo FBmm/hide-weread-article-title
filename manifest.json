@@ -1,0 +1,17 @@
+{
+  "name": "Hide Weread Title Plugin",
+  "description" : "Hide weread article title",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "./page.html",
+    "default_icon": "./icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://weread.qq.com/web/reader/*"],
+      "js": ["./index.js"]
+    }
+  ],
+  "permissions": ["tabs"]
+}
